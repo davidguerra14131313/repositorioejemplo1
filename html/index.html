@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+   <form>
+       <!--TAREA:
+    CAMBIAR EN EL CSS  LAS IMAGENES QUE ESTAN SENTRO DEL TEXTO A AFUERA DEL TEXTOS CON UNA CONDICIONAL PARA QUE CAMBIEN EL COLOR DE LOS BORDES SEGUN LA VERIFICACION DE TEXTO-->
+        <!---<input type="button" onclick="alert('Hello World!')" value="Click Me!">-->
+       <form  action="formulario" method="POST">
+            <nav>
+            <label for="iddni">DNI*: </label>
+            <input type="tel" id="iddni" name="dni"  pattern="[0-9]{8}" placeholder="ingrese numeros" title="ingrese solo 8 numeros" required>
+            <span class="validity"></span><br>            
+            <label for="uname">Nombre*:</label>
+            <input type="text" id="uname"  pattern="[a-zA-Z\s]{1,40}" title=" solo ingrese letras" placeholder="ingrese nombre" required>
+            <span class="validity"></span><br>
+            <label for="apellido">Apellido*</label>
+            <input type="text" id="apellido" pattern="[a-zA-Z\s]{1,40}" title=" solo ingrese letras" placeholder="ingrese apellido" required>
+            <span class="validity"></span><br>
+            <label for="email">e_mail*:</label>
+            <input type="email" id="email" placeholder="ingrese email" required>
+            <span class="validity"></span><br>
+            </nav>
+            
+            <fieldset >
+                <legend>Cargo</legend>
+                <input type="radio"  id="cargoprogramador"name="cargo" value="Programador" >
+                <label for="cargoprogramador">Programador</label>
+                <input type="radio" id="cargotester" name="cargo" value="Tester">
+                <label for="cargotester">Tester</label>
+            </fieldset>
+        
+            <nav>
+            <label for="fechanacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechanacimiento"value="2021-02-05" min="1970-02-05" max="218-02-05"><br>
+           
+            <label for="archivo">Seleccione foto: </label>
+            <input type="file" id="archivo" accept="image/*"><br> 
+
+            <label for="listanavegador">Navegador favorito: </label>
+            <input list="navegadores" id="listanavegador" placeholder=" elige en la lista">
+
+            <datalist  id="navegadores">
+                <option value="Chrome"></option>
+                <option value="Opera"></option>
+                <option value="Safari"></option>
+                <option value="Edge"></option>    
+            </datalist><br>
+
+            <label for="horario">Horario de entrada: </label>
+            <input type="time" id="horiario" name="horarioentrada"><br>
+            <label for="webpersonal">Tu web personal: </label>
+            <input type="url" id="webpersonal" name="web" placeholder="ingresa un link"><br>
+            
+        <label for="biografia" id="biografia">Biografia :</label>
+        <textarea name="textarea" rows="10" cols="45"></textarea><br><br>
+
+        <label for="herramientausar">Herramienta a Usar :</label>
+        <select name="herramientas" id="herramienta">
+        <optgroup label="Programador" id="programador">
+            <option value="android">Android</option>
+            <option  value="vb" >VB</option>
+            <option value="sqlserver">SQLserver</option>
+         </optgroup>
+            <optgroup label="Tester" id="tester">
+            <option value="selenium">Selenium</option>
+            <option value="appium" >Appium</option>      
+            <option value="mantis">Mantis</option>
+        </optgroup>    
+        </select>
+    </nav>
+        <fieldset id="field2">
+            <legend>Pasatiempos</legend>
+            
+            <input  value="videojuegos" type="checkbox" name="pasatiempos" id="videojuego">
+            <label for="videojuego">Videojuego</label>
+            
+            <input value="cine" type="checkbox" name="pasatiempos" id="cine">
+            <label for="cine">Cine</label>
+            
+            <input value="gimnasio" type="checkbox" name="pasatiempos" id="gimnasio">
+            <label for="gimnasio">Gimnasion</label>
+        </fieldset>
+        <nav>
+            <label for="celular">Celular: </label>
+            <input type="tel" name="telefono" id="celular"pattern="[0-9]{3}-[0-9]{9}" placeholder="codpais + numero móvil" title="ingrese correctamente posiniendo codigo de pais + numero celular" >
+            <small> Ejemplo: 051-963227138</small>
+        </nav>
+        
+
+            <h1  for=enviar>
+                <input type="submit" value="Enviar" id="enviar" ></h1>
+            <h1  for=reseteo>
+                <input type="reset" value="Restablecer" id="reseteo" ></h1>
+            
+            
+        </form>
+         
+         
+        </form>
+    
+</body>
+</html>

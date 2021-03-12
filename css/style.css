@@ -1,0 +1,113 @@
+
+body
+
+{
+    background-color: rgb(253, 253, 253);
+   
+}
+input {
+    border: 2px solid;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin: 0.25rem;
+    min-width: 125px;
+    padding: 0.5rem;
+    transition: border-color 0.5s ease-out;/* se transition se para la transicion  ease-out el y otros mas indica la abreviatura de la velocidad en que reaccionara la respuesta*/
+}
+input:invalid + span::after {
+    position: relative; content: '✖';
+    padding-left: 5px;
+    
+    width: 100px;
+    font-size: 1rem;
+  }
+  
+  input:valid + span:after {
+    position: relative;
+    content: '✓';
+    width: 100px;
+    padding-left: 5px;
+    font-size: 1rem;
+  }
+  label
+  {
+      width: 100px;
+      color: black;
+      display: inline-block;
+    
+     
+      
+  }
+ 
+ nav
+  {
+    padding-left: 190px;
+   
+  }
+  
+  fieldset
+  {
+      width: 720px;
+      margin-left:190px ;
+      margin-bottom: 10px;
+      border-width: 5px;
+  }
+#fechanacimiento
+{
+    display: inline;
+}
+ 
+#enviar
+{
+ color: white;
+ background-color: black;
+  width: 42vw;
+}
+h1  
+{
+    text-align: center;
+
+}
+#biografia
+{
+  text-align: top ;
+}
+#reseteo
+{
+    color: black;
+    background-color: rgb(231, 228, 228);
+   width: 42vw;
+}
+ form{
+  background-color: rgb(172, 172, 172);
+  width: 60vw;
+    position: absolute;
+    margin-left: 20vw;
+    margin-right: 20vw;
+ }
+ textarea
+ {
+   resize:none /* ayuda para que  el text area se mantenga un espacio  que no  pueda ser  movido,  hace que el espacio determinando*/
+ }
+ /*
+  input:required:valid {
+    border-color: green;
+  }*/
+  /*input:invalid {
+    border-color: red;
+  }*/
+  input:required:focus:valid {
+    background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+    background-size: 25px;
+    border-color: green;
+  }
+  /*input:required:focus:invalid {
+    background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+    background-size: 25px;*/
+    
+  
+input:required:focus:invalid {
+    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+    background-size: 25px;
+    border-color: red;
+}
